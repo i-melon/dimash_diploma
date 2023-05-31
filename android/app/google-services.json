@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011356557145",
+    "project_id": "dimash-diploma",
+    "storage_bucket": "dimash-diploma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011356557145:android:deff2485bc325b12207648",
+        "android_client_info": {
+          "package_name": "com.example.dimash_diploma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC5RvLIi0xT9XCPJMVO_i_8R29a3U4_vA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
