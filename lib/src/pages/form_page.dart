@@ -1,22 +1,18 @@
+import 'package:dimash_diploma/core/models/diagnoz.dart';
 import 'package:dimash_diploma/core/models/list_of_diagnoz.dart';
 import 'package:dimash_diploma/core/models/question.dart';
+
+import 'package:dimash_diploma/src/pages/symptoms_page.dart';
 import 'package:flutter/material.dart';
 
 class FormPage extends StatefulWidget {
   FormPage({super.key});
 
   @override
-  State<FormPage> createState() => _FormPageState();
+  State<FormPage> createState() => FormPageState();
 }
 
-class _FormPageState extends State<FormPage> {
-  List<String> questions = [
-    'Сколько кашель?',
-    'Сколько кашель?1',
-    'Сколько кашель?2',
-    'Сколько кашель?3',
-  ];
-
+class FormPageState extends State<FormPage> {
   List<Question> questionList = listOfDiagnos[0].questions;
   var questionIndex = 0;
   void ans() {

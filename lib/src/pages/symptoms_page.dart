@@ -1,4 +1,7 @@
+import 'package:dimash_diploma/core/models/diagnoz.dart';
+import 'package:dimash_diploma/core/models/list_of_diagnoz.dart';
 import 'package:dimash_diploma/core/models/list_of_symptoms.dart';
+import 'package:dimash_diploma/core/models/question.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -6,10 +9,13 @@ class SymptomsPage extends StatefulWidget {
   const SymptomsPage({super.key});
 
   @override
-  State<SymptomsPage> createState() => _SymptomsPageState();
+  State<SymptomsPage> createState() => SymptomsPageState();
 }
 
-class _SymptomsPageState extends State<SymptomsPage> {
+class SymptomsPageState extends State<SymptomsPage> {
+  List<String> listOfActiveSymptoms = [];
+  List<Diagnoz> listOfActiveDiagnoz = [];
+  List<Question> listOfActiveQuestions = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,8 +88,29 @@ class _SymptomsPageState extends State<SymptomsPage> {
             onPressed: () {
               context.go('/form');
               for (int i = 0; i < symptoms.length; i++) {
-                print(symptoms[i].isActive);
+                if (symptoms[i].isActive) {
+                  listOfActiveSymptoms.add(symptoms[i].name);
+                }
               }
+              for (int i = 0; i < listOfDiagnos.length; i++) {
+                for (int y = 0; y < listOfDiagnos[i].symtoms.length; y++) {
+                  for (int z = 0; z < listOfActiveSymptoms.length; z++) {
+                    if (listOfActiveSymptoms[z] ==
+                        listOfDiagnos[i].symtoms[y]) {
+                      listOfActiveDiagnoz.add(listOfDiagnos[i]);
+                    }
+                  }
+                }
+              }
+              for (int i = 0; i < listOfActiveDiagnoz.length; i++) {
+                for (int y = 0;
+                    y < listOfActiveDiagnoz[i].questions.length;
+                    y++) {
+                  listOfActiveQuestions
+                      .add(listOfActiveDiagnoz[i].questions[y]);
+                }
+              }
+              print(listOfActiveQuestions);
             },
             child: Container(
                 height: 60,

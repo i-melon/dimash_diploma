@@ -3,6 +3,7 @@ import 'package:dimash_diploma/src/pages/main_page.dart';
 import 'package:dimash_diploma/src/pages/symptoms_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'models/question.dart';
 
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
