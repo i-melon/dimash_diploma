@@ -14,12 +14,6 @@ final GoRouter router = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'form',
-          builder: (BuildContext context, GoRouterState state) {
-            return FormPage();
-          },
-        ),
-        GoRoute(
           path: 'symptoms',
           builder: (BuildContext context, GoRouterState state) {
             return SymptomsPage();

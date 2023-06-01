@@ -6,9 +6,14 @@ import 'package:dimash_diploma/src/details/start.dart';
 import 'package:dimash_diploma/src/details/steps.dart';
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +25,7 @@ class MainPage extends StatelessWidget {
           title: Container(
             width: 250,
             child: Image.network(
-              'https://s3-alpha-sig.figma.com/img/9f12/7ff8/3bb30dd79599efed645caf520a89703f?Expires=1685318400&Signature=eFrj7JPHbTE2wcS3y1AP4dzKck4d7u~30Vr8KUPvSkgWCifjTZhWXJq52x1hGHB5xKBKmZsbUu54mzNvM18mgP5K3iKApdk5Z1OA2ul~u2ue9aDTaLh4nqGI3nAHpYqnofftedrgsS9tKaIdRwp5fvOCbQ53b1Xi66b68EtQa5qxDZmWl6E1YYRjwVdbmiI3cNe0nen2MhXlYuqWWZ1WkOgcRF2~g1eEovtWTHy9cA7RFIr0UH4ardz1HRpV9vwzHsKASzVWTA04hrv1GRQZKGpyMWEizaYRHmPBuQHUf2gdkwJK-PxpsA0RVXt69bY~NzSPjlx3NVGR41GuREfIhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              'https://s3-alpha-sig.figma.com/img/f54a/9bd5/ac16ca75b060c30119405bcf1ffd9525?Expires=1686528000&Signature=gNtda94ORVjNrJL2McRkdvhgK8zG7bSi6zbJb7DaFXVhOydUiMghO43dufODkePePjB2ji0Sv7XJbhSGB4SRbu2dwl~lcZD9UdhS6pNFuUwxofIeeVNMQXc1axnDlG8YNf1ztUB7h3j3osCWyI2eXYdOtQ1t7rUEiZnSEq62sdijXOfpM97UoQmeGNwHVZsBIQoILgl1e2PubyuZ-0p-PI5dpg8D5krPOC05-1mamYj9y5g6uTk1v2p1YoOLRsYTINQF0Pn0AIdrPLrkWiAFVfEbZi5OSInCa97WLsJdLYyjfBQpCAD~ZiNvQMq6PprZRnhfX0AWyj52WPGzXJoglw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
               fit: BoxFit.cover,
             ),
           )),
