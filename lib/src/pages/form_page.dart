@@ -76,6 +76,7 @@ class FormPageState extends State<FormPage> {
                   return Card(
                     child: ElevatedButton(
                       onPressed: () {
+                        questionList[questionIndex].answers[index].point;
                         ans();
                       },
                       child: Text(
