@@ -1,7 +1,9 @@
+import 'package:dimash_diploma/core/models/answer.dart';
 import 'package:dimash_diploma/core/models/diagnoz.dart';
 import 'package:dimash_diploma/core/models/list_of_diagnoz.dart';
 import 'package:dimash_diploma/core/models/list_of_symptoms.dart';
 import 'package:dimash_diploma/core/models/question.dart';
+import 'package:dimash_diploma/core/models/symptom.dart';
 import 'package:dimash_diploma/src/pages/form_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -93,10 +95,10 @@ class SymptomsPageState extends State<SymptomsPage> {
                 }
               }
               for (int i = 0; i < listOfDiagnos.length; i++) {
-                for (int y = 0; y < listOfDiagnos[i].symtoms.length; y++) {
+                for (int y = 0; y < listOfDiagnos[i].symptoms.length; y++) {
                   for (int z = 0; z < listOfActiveSymptoms.length; z++) {
                     if (listOfActiveSymptoms[z] ==
-                        listOfDiagnos[i].symtoms[y]) {
+                        listOfDiagnos[i].symptoms[y]) {
                       listOfActiveDiagnoz.add(listOfDiagnos[i]);
                     }
                   }
@@ -110,7 +112,7 @@ class SymptomsPageState extends State<SymptomsPage> {
                       .add(listOfActiveDiagnoz[i].questions[y]);
                 }
               }
-              print(listOfActiveQuestions[0].question);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(

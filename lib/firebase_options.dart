@@ -47,13 +47,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBux7jT-KaRaboEuC52rpPYzQ1GRXGRn0g',
-    appId: '1:1011356557145:web:59dce4139dcc9ccf207648',
-    messagingSenderId: '1011356557145',
-    projectId: 'dimash-diploma',
-    authDomain: 'dimash-diploma.firebaseapp.com',
-    storageBucket: 'dimash-diploma.appspot.com',
-  );
+      apiKey: 'AIzaSyBux7jT-KaRaboEuC52rpPYzQ1GRXGRn0g',
+      appId: '1:1011356557145:web:59dce4139dcc9ccf207648',
+      messagingSenderId: '1011356557145',
+      projectId: 'dimash-diploma',
+      authDomain: 'dimash-diploma.firebaseapp.com',
+      storageBucket: 'dimash-diploma.appspot.com',
+      databaseURL:
+          'https://dimash-diploma-default-rtdb.asia-southeast1.firebasedatabase.app/');
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBC5RvLIi0xT9XCPJMVO_i_8R29a3U4_vA',

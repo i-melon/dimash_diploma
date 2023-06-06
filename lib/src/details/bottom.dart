@@ -1,3 +1,4 @@
+import 'package:dimash_diploma/core/models/db.dart';
 import 'package:flutter/material.dart';
 
 class Bottom extends StatefulWidget {
@@ -22,7 +23,13 @@ class _BottomState extends State<Bottom> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextButton(
-            onPressed: () {
+            onPressed: () async {
+              final snapshot = await ref.child("diagnoz").get();
+              if (snapshot.exists) {
+                print(snapshot.value);
+              } else {
+                print('No data available.');
+              }
               setState(() {
                 num = '8-771-222-16-11';
                 email = 'dimash21dautov@gmail.com';

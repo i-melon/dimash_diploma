@@ -1,7 +1,15 @@
 import 'package:dimash_diploma/core/router.dart';
-import 'package:dimash_diploma/src/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'core/models/db.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(MaterialApp.router(
-      routerConfig: router,
-    ));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MaterialApp.router(
+    routerConfig: router,
+  ));
+}
